@@ -1,0 +1,12 @@
+input:invalid {
+    border: 5px solid;
+    border-color: rgb(158, 30, 30);
+    }
+    
+input:valid:not(.button){
+    border: 5px solid;
+    border-color: rgb(22, 109, 22);
+    }
+.button { 
+    border: 1px solid rgb(0, 0, 0); 
+    }
