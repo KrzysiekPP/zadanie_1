@@ -201,7 +201,22 @@ function removeCustomer(id){
 	}
 
 }
+function generateRandomIntegerInRange(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 function exampleText() {
+  var emailArray = ['raz@gmail.com', 'dwa@gmail.com','pelikan@gmail.com','janek@gmail.com','piotrek@wp.com'];
+  var zipcodeArray = ['91-112', '93-115','83-100','15-112','11-111'];
+  var nipArray = ['100-10-20-200', '999-19-29-299','291-00-10-800','299-01-15-803','295-03-11-823'];
+  var dowodArray = ['ABC 123456', 'DEF 125456','DZE 512523','DTT 512123','PPA 124123'];
+  var ip4Array = ['192.168.1.1', '192.168.1.5','192.168.1.3','192.168.1.2','192.168.1.4'];
+  var wwwArray = ['www.google.com', 'www.google.pl','www.wp.pl','www.politechnika.com','www.adrian.com'];
+  var diskAArray = ['c:\\windows\\temp','d:\\windows\\temp','e:\\windows\\temp','f:\\windows\\temp','g:\\windows\\temp'];
+  var diskBArray = ['C:\\Windows\\temp','D:\\Windows\\temp','E:\\Windows\\temp','F:\\Windows\\temp','G:\\Windows\\temp'];
+  var ip6Array = ['2001:0db8:85a3:0000:0000:8a2e:0370:7334','2551:0db8:8553:0200:0300:6a2e:0370:7334','2001:0db7:85b3:0000:0000:3b2a:7378:7147','7002:0ea8:85b5:0000:0000:8a2e:0370:7334','3551:0e68:35b3:0000:0000:8a3e:0370:7334'];
+  var catalogArray = ['/etc/passwd','/etc/hhh','/etc/options','/etc/modules','/etc/por'];
+  var phoneArray = ['492-492-492','333-999-222','436-111-452','112-499-477','782-411-495'];
+
   var email = document.getElementById('email');
   var zipcode = document.getElementById('zipcode');
   var nip = document.getElementById('nip');
@@ -213,6 +228,30 @@ function exampleText() {
   var ip6 = document.getElementById('ip6');
   var catalog = document.getElementById('catalog');
   var phone = document.getElementById('phone');
+
+  let value = generateRandomIntegerInRange(0, 4);
+  email.value = emailArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  zipcode.value = zipcodeArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  nip.value = nipArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  dowod.value = dowodArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  ip4.value = ip4Array[value];
+  value = generateRandomIntegerInRange(0, 4);
+  www.value = wwwArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  diskA.value = diskAArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  diskB.value = diskBArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  catalog.value = catalogArray[value];
+  value = generateRandomIntegerInRange(0, 4);
+  ip6.value = ip6Array[value];
+  value = generateRandomIntegerInRange(0, 4);
+  phone.value = phoneArray[value];
+/*
   email.value = "raz@gmail.com";
   zipcode.value = "91-112";
   nip.value = "100-10-20-200";
@@ -224,7 +263,7 @@ function exampleText() {
   catalog.value = "/etc/passwd";
   ip6.value = "2001:0db8:85a3:0000:0000:8a2e:0370:7334";
   phone.value = "492-492-492";
-
+*/
 }
 
 function clearText() {
